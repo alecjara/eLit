@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "./axios";
 import {BrowserRouter} from "react-router-dom";
 import Logo from "./logo";
+import Search from "./search";
 //import { Link } from 'react-router-dom';
 
 export default class App extends React.Component {
@@ -13,8 +14,8 @@ export default class App extends React.Component {
 
     componentDidMount() {
         axios.get("/user").then(({data}) => {
-            //console.log("data in /get then:", data);
-            this.setState(data);
+            console.log("data in /get then:", data);
+            //this.setState(data);
         });
     }
 
@@ -22,7 +23,10 @@ export default class App extends React.Component {
         return (
             <div>
                 <BrowserRouter>
-                    <Logo />
+                    <div>
+                        <Logo />
+                        <Search />
+                    </div>
                 </BrowserRouter>
 
             </div>
@@ -30,3 +34,5 @@ export default class App extends React.Component {
 
     }
 }
+
+//<a href="/logout">LOGOUT</a>

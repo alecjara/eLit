@@ -41,7 +41,7 @@ export default class Registration extends React.Component {
             <div className="registration-container">
                 <br />
                 {this.state.error && <div>Error, please try again!!</div>}
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} id="regform">
                     <h1>Please Register!!!</h1>
                     <input onChange= {this.handleChange} name="firstname" type="text" placeholder="first name" />
                     <br />

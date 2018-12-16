@@ -1,17 +1,96 @@
+*{
+    font-family: "Papyrus", "Trebuchet MS", Arial;
+    letter-spacing: 1px;
+    font-weight: 200;
+    /* background-color: black; */
+    color: white;
+}
+
+body {
+
+    background-image: url("orange.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+
 .welcome {
 
     font-family: "Papyrus", "Trebuchet MS", Arial;
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 200;
+    /* margin-left: 40%; */
+    position: relative;
+    overflow: hidden;
+
+}
+
+.registration-container {
+    display: block;
+    margin-left: 40%;
+
+}
+
+.logincont {
+    display: block;
+
+
 
 }
 
 .logo {
     width: 300px;
     height: 300px;
-    background-color: #a55fc1;
+    margin-left: 40%;
+    /* background-color: #a55fc1; */
+    /* background-color: #8a25b1; */
 }
 
-/* background-color: #a55fc1; */
-/* background-color: #8a25b1; */
+input {
+    border: 2px solid white;
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: black;
+
+}
+
+#regform {
+    color: orange;
+}
+
+.regbutton {
+    border-radius: 25%;
+    margin-top: 5px;
+    border: 2px solid white;
+    font-size: 20px;
+    color: black;
+}
+
+
+/* animations: */
+/* @-webkit-keyframes kenburns-top {0%{-webkit-transform:scale(1) translateY(0);
+    transform:scale(1) translateY(0);
+    -webkit-transform-origin:50% 16%;
+    transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);
+        transform:scale(1.25) translateY(-15px);
+        -webkit-transform-origin:top;transform-origin:top}}
+        @keyframes kenburns-top{0%{-webkit-transform:scale(1) translateY(0);
+            transform:scale(1) translateY(0);
+            -webkit-transform-origin:50% 16%;
+            transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);
+                transform:scale(1.25) translateY(-15px);
+                -webkit-transform-origin:top;transform-origin:top}
+            } */
+
+/* @-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);
+    transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);
+        transform:scale(1);
+        opacity:1}}
+        @keyframes scale-in-center{0%{-webkit-transform:scale(0);
+            transform:scale(0);
+            opacity:1}100%{-webkit-transform:scale(1);
+                transform:scale(1);
+                opacity:1}
+            } */
