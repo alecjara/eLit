@@ -3,14 +3,14 @@
     letter-spacing: 1px;
     font-weight: 200;
     /* background-color: black; */
-    color: white;
+    color: black;
 }
 
 body {
 
-    background-image: url("orange.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url("orange.jpg"); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
     min-height: 100vh;
 
 }
@@ -49,7 +49,7 @@ body {
 }
 
 input {
-    border: 2px solid white;
+    border: 2px solid black;
     font-size: 20px;
     margin-bottom: 4px;
     color: black;
@@ -57,18 +57,31 @@ input {
 }
 
 #regform {
-    color: orange;
+    color: black;
 }
 
 .regbutton {
     border-radius: 25%;
     margin-top: 5px;
-    border: 2px solid white;
+    border: 2px solid black;
     font-size: 20px;
     color: black;
 }
 
+#bookres {
+    border: 2px black solid;
+    width: 75%;
+    padding: 15px;
+    /* height: 100%; */
+}
 
+.searchbutton {
+    border-radius: 25%;
+    border: 2px solid black;
+    font-size: 15px;
+    margin-left: 8px;
+    color: black;
+}
 /* animations: */
 /* @-webkit-keyframes kenburns-top {0%{-webkit-transform:scale(1) translateY(0);
     transform:scale(1) translateY(0);

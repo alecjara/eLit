@@ -8,6 +8,7 @@ const { hash, compare } = require("./bcrypt");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
 
+
 app.disable("x-powered-by");
 
 app.use(bodyparser.urlencoded({extended: false}));
@@ -127,6 +128,37 @@ app.get("/user", (req, res) => {
 //     console.log("error in axios get:", error);
 // });
 
+
+let books = require('google-books-search');
+
+let options = {
+    key: myKey,
+    field: 'title',
+    offset: 0,
+    limit: 10,
+    type: 'books',
+    order: 'relevance',
+    lang: 'en'
+};
+
+app.get("/search/:name", (req, res) => {
+    books.search(req.params.name, options, function(error, results, apiResponse) {
+        if ( ! error ) {
+            console.log("results in search index.js:", results);
+            console.log("apiResponse:", apiResponse);
+            res.json(results);
+        } else {
+            console.log(error);
+        }
+
+    });
+});
+//
+// books.search("harry potter", options).then(function(results) {
+//     console.log("harry potter:", results);
+// }).catch(function(error) {
+//     console.log(error);
+// });
 
 app.get("/logout", (req, res) => {
     req.session = null;
