@@ -45,8 +45,18 @@ if (process.env.NODE_ENV != 'production') {
     app.use('/bundle.js', (req, res) => res.sendFile(`${__dirname}/bundle.js`));
 }
 
+let secrets;
+
+if (process.env.NODE_ENV == 'production') {
+    secrets = process.env;
+} else {
+    secrets = require('./secrets');
+    //console.log("secrets:", secrets);
+}
+const myKey = secrets.API_KEY;
+
 app.post("/registration", (req, res) => {
-    console.log("req.body in /registration:", req.body);
+    //console.log("req.body in /registration:", req.body);
     if (req.body.password != "") {
         hash(req.body.password).then(hash => {
             console.log("hashedpassword in post /registration:", hash);
@@ -107,6 +117,16 @@ app.get("/user", (req, res) => {
         console.log("error in get /user:", err);
     });
 });
+
+// app.get(`https://www.googleapis.com/books/v1/volumes?q=pride+prejudice&download=epub&key=` + myKey
+// ).then(data => {
+//     //console.log("data in axios get:", data);
+//     this.setState(data.data.items);
+//     //redirects user to / route: use this if user writes nonsense in url
+// }).catch(error => {
+//     console.log("error in axios get:", error);
+// });
+
 
 app.get("/logout", (req, res) => {
     req.session = null;
