@@ -8,9 +8,9 @@ export default function Welcome() {
     return (
         <div className="welcome">
             <h1>Welcome to</h1>
-            <img className="logo" src="/eLit1.png"  alt="eBooks" />
+            <img className="logo" src="/eLitb.png"  alt="eBooks" />
 
-        
+
             <HashRouter>
                 <div>
                     <Route exact path = "/" component = {Registration} />

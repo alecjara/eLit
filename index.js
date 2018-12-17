@@ -136,8 +136,10 @@ let options = {
     field: 'title',
     offset: 0,
     limit: 10,
-    type: 'books',
+    // type: 'books',
     order: 'relevance',
+    download: 'epub',
+    printType: 'ebook',
     lang: 'en'
 };
 
