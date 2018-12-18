@@ -119,16 +119,15 @@ app.get("/user", (req, res) => {
     });
 });
 
-// app.get(`https://www.googleapis.com/books/v1/volumes?q=pride+prejudice&download=epub&key=` + myKey
-// ).then(data => {
+// app.get(`https://www.googleapis.com/books/v1/volumes?q=params&download=epub&key=` + myKey).then(data => {
 //     //console.log("data in axios get:", data);
-//     this.setState(data.data.items);
+//     this.setState(data);
 //     //redirects user to / route: use this if user writes nonsense in url
 // }).catch(error => {
 //     console.log("error in axios get:", error);
 // });
 
-
+//google books:
 let books = require('google-books-search');
 
 let options = {
@@ -155,16 +154,11 @@ app.get("/search/:name", (req, res) => {
 
     });
 });
-//
-// books.search("harry potter", options).then(function(results) {
-//     console.log("harry potter:", results);
-// }).catch(function(error) {
-//     console.log(error);
-// });
+//end of google books!
 
 app.get("/logout", (req, res) => {
     req.session = null;
-    res.redirect("/");
+    res.redirect("/welcome");
 });
 
 app.get('/welcome', function(req, res) {

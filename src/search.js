@@ -6,9 +6,7 @@ import axios from "./axios";
 export default class Search extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        };
+        this.state = {};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,7 +24,7 @@ export default class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         axios.get("/search/" + this.state.search).then(results => {
-            //console.log(this.state.search);
+            console.log(this.state.search);
             this.setState({
                 results: results.data
             }, () => console.log("state", this.state));
@@ -38,33 +36,31 @@ export default class Search extends React.Component {
     }
 
     render() {
-        //console.log("this.state.search:", this.state.search);
-        // if (!this.state.search)  {
-        //     return null;
-        // }
-        // console.log("this.state.search:", this.state.search);
 
         return (
-            <div>
+            <div >
                 {this.state.error && <div>Error, please try again!!</div>}
                 <form onSubmit={this.handleSubmit}>
                     <input onChange= {this.handleChange} name="search" type="text" placeholder="search" />
                     <button className="searchbutton">Search Books</button>
                 </form>
-                {this.state.results && this.state.results.map(books => {
-                    console.log("this.state:", this.state);
-                    return (
-                        <div key={books.id} id="bookres" >
-                            {books.title}
-                            <br />
-                            {books.authors}
-                            <br />
-                            {books.link}
+                <div id="booksresults">
+                    <br />
+                    {this.state.results && this.state.results.map(books => {
+                        console.log("this.state:", this.state);
+                        return (
+                            <div key={books.id} id="bookres" >
+                                <h4>Title: {books.title}</h4>
+                                <h4>Author: {books.authors}</h4>
+                                <a href={books.link}>Link to read the book</a>
+                                <br />
+                                <img src={books.thumbnail} />
 
-                        </div>
-                    );
-                }
-                )}
+                            </div>
+                        );
+                    }
+                    )}
+                </div>
             </div>
         );
     }

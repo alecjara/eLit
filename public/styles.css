@@ -8,9 +8,11 @@
 
 body {
 
-    /* background-image: url("orange.jpg"); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
+    background-image: url("tablet.jpg");
+    /* background-position: center; */
+    background-size: cover;
+    /* object-fit: cover; */
+    background-repeat: no-repeat;
     min-height: 100vh;
 
 }
@@ -29,13 +31,15 @@ body {
 
 .registration-container {
     display: block;
-    margin-left: 40%;
+    margin-left: 35%;
+    margin-top: 10%;
 
 }
 
 .logincont {
     display: block;
-
+    margin-left: 30%;
+    margin-top: 15%;
 
 
 }
@@ -43,7 +47,7 @@ body {
 .logo {
     width: 300px;
     height: 300px;
-    margin-left: 40%;
+    float: right;
     /* background-color: #a55fc1; */
     /* background-color: #8a25b1; */
 }
@@ -68,11 +72,19 @@ input {
     color: black;
 }
 
+#booksresults {
+    margin-left: 30%;
+    margin-top: 10%;
+    display: flex;
+
+}
+
 #bookres {
     border: 2px black solid;
-    width: 75%;
-    padding: 15px;
-    /* height: 100%; */
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
 .searchbutton {
@@ -81,6 +93,10 @@ input {
     font-size: 15px;
     margin-left: 8px;
     color: black;
+}
+
+#logout {
+
 }
 /* animations: */
 /* @-webkit-keyframes kenburns-top {0%{-webkit-transform:scale(1) translateY(0);

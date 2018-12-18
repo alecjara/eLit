@@ -3,6 +3,8 @@ import axios from "./axios";
 import {BrowserRouter} from "react-router-dom";
 import Logo from "./logo";
 import Search from "./search";
+//import Search2 from "./search2";
+//import Search3 from "./search3";
 //import { Link } from 'react-router-dom';
 
 export default class App extends React.Component {
@@ -24,6 +26,9 @@ export default class App extends React.Component {
             <div>
                 <BrowserRouter>
                     <div>
+                        <a href="/logout" id="logout">LOGOUT</a>
+                        <br />
+                        <br />
                         <Logo />
                         <Search />
                     </div>
@@ -35,4 +40,6 @@ export default class App extends React.Component {
     }
 }
 
-//<a href="/logout">LOGOUT</a>
+
+//<Search2 />
+//<Search3 />
