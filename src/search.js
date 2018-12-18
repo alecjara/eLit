@@ -50,11 +50,11 @@ export default class Search extends React.Component {
                         console.log("this.state:", this.state);
                         return (
                             <div key={books.id} id="bookres" >
+                                <img src={books.thumbnail} />
                                 <h4>Title: {books.title}</h4>
                                 <h4>Author: {books.authors}</h4>
-                                <a href={books.link}>Link to read the book</a>
+                                <a href={books.link} target="__blank">Link to read the book</a>
                                 <br />
-                                <img src={books.thumbnail} />
 
                             </div>
                         );
@@ -65,3 +65,6 @@ export default class Search extends React.Component {
         );
     }
 }
+
+//div position absolute inside the tablet
+//overflow-x: scroll

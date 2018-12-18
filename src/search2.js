@@ -1,9 +1,9 @@
 // import React from 'react';
 // import axios from "./axios";
-// // //import {Link} from "react-router-dom";
-// //
-// //
-// // export default class Search2 extends React.Component {
+// //import {Link} from "react-router-dom";
+//
+//
+// 
 // export default class Search2 extends React.Component {
 //     constructor(props) {
 //         super(props);
