@@ -45,11 +45,13 @@
         "redux": "^3.7.1",
         "redux-devtools-extension": "^2.13.2",
         "redux-promise": "^0.5.3",
+        "request": "^2.88.0",
         "socket.io": "^2.0.3",
         "spiced-pg": "^1.0.0",
         "uid-safe": "^2.1.4",
         "webpack": "^1.14.0",
-        "webpack-dev-middleware": "^1.8.4"
+        "webpack-dev-middleware": "^1.8.4",
+        "xml-js": "^1.6.8"
     },
     "keywords": [],
     "author": "",

@@ -7,6 +7,8 @@ const db = require("./db");
 const { hash, compare } = require("./bcrypt");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
+const https = require('https');
+const convert = require('xml-js');
 
 
 app.disable("x-powered-by");
@@ -134,7 +136,7 @@ let options = {
     key: myKey,
     field: 'title',
     offset: 0,
-    limit: 5,
+    limit: 10,
     // type: 'books',
     order: 'relevance',
     download: 'epub',
@@ -154,7 +156,56 @@ app.get("/search/:name", (req, res) => {
 
     });
 });
+
 //end of google books!
+
+const request = require('request');
+//const url = 'https://openlibrary.org/search/authors?q=${author}';
+
+//app.get("search/:isbn", )
+//${isbn}
+//9780980200447
+request('https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&format=json', (err, res, body) => {
+    if ( ! err ) {
+        console.log("body in request:", body);
+        console.log("res in request:", res);
+        // res.json(res);
+    } else {
+        console.log(err);
+    }
+
+
+
+
+    //let parsedResults = JSON.parse(res.body);
+    //console.log("parsedResults:", parsedResults);
+    //res.json(parsedResults);
+});
+
+// https.get('https://openlibrary.org/api/books?bibkeys=ISBN:${}&format=json', (resp) => {
+//     let data = '';
+//
+//     // A chunk of data has been recieved.
+//     resp.on('data', (chunk) => {
+//         data += chunk;
+//         console.log("data", data);
+//     });
+//
+//     //The whole response has been received. Print out the result.
+//     resp.on('end', () => {
+//         console.log("data in get api", data);
+//         // let results2 = convert.xml2json(data, {compact: true, spaces: 4});
+//         // console.log("results2", results2);
+//         // //let finalresults = JSON.parse(results2);
+//         // console.log("finalresults", finalresults);
+//     });
+//
+// }).on("error", (err) => {
+//     console.log("Error: " + err.message);
+// });
+
+
+
 
 app.get("/logout", (req, res) => {
     req.session = null;

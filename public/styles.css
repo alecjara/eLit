@@ -78,9 +78,9 @@ input {
 #booksresults {
     position: absolute;
     width: 600px;
-    height: 490px;
+    height: 450px;
     margin-left: 530px;
-    margin-top: 230px;
+    margin-top: 190px;
     /* margin-left: 29%;
     margin-right: 30%;
     margin-top: 10%; */
@@ -92,7 +92,7 @@ input {
 #bookres {
     /* border: 2px black solid; */
     width: 610px;
-    height: 480px;
+    height: 430px;
 
 
 }
@@ -130,6 +130,10 @@ input {
 
 }
 
+.kindle {
+    width: 25px;
+    height: 25px;
+}
 
 
 /* animations: */
