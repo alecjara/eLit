@@ -38,6 +38,9 @@ export default class App extends React.Component {
                             <br />
                             <img className="kindle" src="/kindle.png"  alt="kindle" /> <a target="__blank" href="https://www.amazon.com/Best-Sellers-Kindle-Store-eBooks/zgbs/digital-text/154606011/ref=zg_bs?_encoding=UTF8&tf=1">Top 100 Kindle</a>
                         </div>
+                        <div id="personal">
+                        
+                        </div>
                     </div>
                 </BrowserRouter>
 

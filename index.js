@@ -7,8 +7,6 @@ const db = require("./db");
 const { hash, compare } = require("./bcrypt");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
-const https = require('https');
-const convert = require('xml-js');
 
 
 app.disable("x-powered-by");
@@ -121,15 +119,6 @@ app.get("/user", (req, res) => {
     });
 });
 
-// app.get(`https://www.googleapis.com/books/v1/volumes?q=params&download=epub&key=` + myKey).then(data => {
-//     //console.log("data in axios get:", data);
-//     this.setState(data);
-//     //redirects user to / route: use this if user writes nonsense in url
-// }).catch(error => {
-//     console.log("error in axios get:", error);
-// });
-
-//google books:
 let books = require('google-books-search');
 
 let options = {
@@ -157,30 +146,74 @@ app.get("/search/:name", (req, res) => {
     });
 });
 
-//end of google books!
+app.get("/logout", (req, res) => {
+    req.session = null;
+    res.redirect("/welcome");
+});
 
-const request = require('request');
+app.get('/welcome', function(req, res) {
+    if (req.session.user_id) {
+        res.redirect('/');
+    } else {
+        res.sendFile(__dirname + '/index.html');
+    }
+});
+
+
+app.get('*', function(req, res) {
+    res.sendFile(__dirname + '/index.html');
+});
+
+app.listen(8080, function() {
+    console.log("I'm listening.");
+});
+
+
+// app.get(`https://www.googleapis.com/books/v1/volumes?q=params&download=epub&key=` + myKey).then(data => {
+//     //console.log("data in axios get:", data);
+//     this.setState(data);
+//     //redirects user to / route: use this if user writes nonsense in url
+// }).catch(error => {
+//     console.log("error in axios get:", error);
+// });
+
+
+//const https = require('https');
+//const convert = require('xml-js');
+
+
+//const request = require('request');
 //const url = 'https://openlibrary.org/search/authors?q=${author}';
 
 //app.get("search/:isbn", )
 //${isbn}
 //9780980200447
-request('https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&format=json', (err, res, body) => {
-    if ( ! err ) {
-        console.log("body in request:", body);
-        console.log("res in request:", res);
-        // res.json(res);
-    } else {
-        console.log(err);
-    }
+// request('https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&format=json', (err, res, body) => {
+//     if ( ! err ) {
+//         console.log("body in request:", body);
+//         console.log("res in request:", res);
+//         // res.json(res);
+//     } else {
+//         console.log(err);
+//     }
+
+//var rp = require('request-promise');
+//
+// app.get("/search", (req, res) => {
+//     console.log("Res", res);
+//     rp('https://openlibrary.org/api/books?bibkeys=ISBN:{isbn}&format=json').then(function(res) {
+//         console.log("res on openlibrary api", res);
+//         res.json(res);
+//     }).catch(err => {
+//         console.log("error in openlibrary api:", err);
+//     });
+// });
 
 
-
-
-    //let parsedResults = JSON.parse(res.body);
-    //console.log("parsedResults:", parsedResults);
-    //res.json(parsedResults);
-});
+//let parsedResults = JSON.parse(res.body);
+//console.log("parsedResults:", parsedResults);
+//res.json(parsedResults);
+// });
 
 // https.get('https://openlibrary.org/api/books?bibkeys=ISBN:${}&format=json', (resp) => {
 //     let data = '';
@@ -203,28 +236,3 @@ request('https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&format=jso
 // }).on("error", (err) => {
 //     console.log("Error: " + err.message);
 // });
-
-
-
-
-app.get("/logout", (req, res) => {
-    req.session = null;
-    res.redirect("/welcome");
-});
-
-app.get('/welcome', function(req, res) {
-    if (req.session.user_id) {
-        res.redirect('/');
-    } else {
-        res.sendFile(__dirname + '/index.html');
-    }
-});
-
-
-app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
-});
-
-app.listen(8080, function() {
-    console.log("I'm listening.");
-});

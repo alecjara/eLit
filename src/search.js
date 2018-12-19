@@ -50,10 +50,13 @@ export default class Search extends React.Component {
                         console.log("this.state:", this.state);
                         return (
                             <div key={books.id} id="bookres" >
-                                <img src={books.thumbnail} />
-                                <h4>Title: {books.title}</h4>
-                                <h4>Author: {books.authors}</h4>
-                                <a href={books.link} target="__blank">Link to read the book</a>
+
+                                <div id="bookimg-div"><img id="bookimg" src={books.thumbnail || "/book.jpg"} /></div>
+                                <div id="text-div">
+                                    <p className="bookinfo">Title: {books.title}</p>
+                                    <p className="bookinfo">Author: {books.authors}</p>
+                                    <a className="bookinfo" href={books.link} target="__blank">Link to read the book</a>
+                                </div>
                                 <br />
 
                             </div>

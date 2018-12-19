@@ -18,18 +18,18 @@
 //         if (event.key === "Enter") this.search();
 //     }
 //
-    // search() {
-    //     let query = this.state.query;
-    //      const myKey = secrets.API_KEY;
-    //     const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=query&download=epub&key=` + myKey;
-    //     fetch(BASE_URL, { method: "GET" })
-    //         .then(response => response.json())
-    //         .then(json => {
-    //             let { items } = json;
-    //             this.setState({
-    //                 items: items
-    //             });
-    //         });
+// search() {
+//     let query = this.state.query;
+//      const myKey = secrets.API_KEY;
+//     const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=query&download=epub&key=` + myKey;
+//     fetch(BASE_URL, { method: "GET" })
+//         .then(response => response.json())
+//         .then(json => {
+//             let { items } = json;
+//             this.setState({
+//                 items: items
+//             });
+//         });
 //         console.log("clicked on search button:", this.state.query);
 //     }
 //     handleChange(event) {

@@ -95,6 +95,8 @@ input {
     height: 430px;
 
 
+
+
 }
 
 .searchbutton {
@@ -126,8 +128,6 @@ input {
     right: 40px;
     font-size: 25px;
     font-weight: bold;
-
-
 }
 
 .kindle {
@@ -135,29 +135,21 @@ input {
     height: 25px;
 }
 
+#bookimg {
+    width: 200px;
+    height: 220px;
+    display: inline-block;
+    border: 1px solid black;
+}
 
-/* animations: */
-/* @-webkit-keyframes kenburns-top {0%{-webkit-transform:scale(1) translateY(0);
-    transform:scale(1) translateY(0);
-    -webkit-transform-origin:50% 16%;
-    transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);
-        transform:scale(1.25) translateY(-15px);
-        -webkit-transform-origin:top;transform-origin:top}}
-        @keyframes kenburns-top{0%{-webkit-transform:scale(1) translateY(0);
-            transform:scale(1) translateY(0);
-            -webkit-transform-origin:50% 16%;
-            transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);
-                transform:scale(1.25) translateY(-15px);
-                -webkit-transform-origin:top;transform-origin:top}
-            } */
+#bookimg-div {
+    text-align: center;
+}
 
-/* @-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);
-    transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);
-        transform:scale(1);
-        opacity:1}}
-        @keyframes scale-in-center{0%{-webkit-transform:scale(0);
-            transform:scale(0);
-            opacity:1}100%{-webkit-transform:scale(1);
-                transform:scale(1);
-                opacity:1}
-            } */
+#text-div {
+    text-align: center;
+}
+
+.bookinfo {
+    font-size: 20px;
+}
