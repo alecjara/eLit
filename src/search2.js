@@ -3,7 +3,7 @@
 // //import {Link} from "react-router-dom";
 //
 //
-// 
+//
 // export default class Search2 extends React.Component {
 //     constructor(props) {
 //         super(props);
@@ -13,9 +13,10 @@
 //     //componentDidMount() {
 //         handleSubmit()
 //         //searh()
+//         const url = "https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&callback=mycallback";
 //         const isbn = "";
 //
-//         axios.get(`https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&callback=mycallback`).then(
+//         axios.get(``).then(
 //                 (result) => {
 //                     this.setState({
 //                         isLoaded: true,

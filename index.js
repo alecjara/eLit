@@ -134,7 +134,7 @@ let options = {
     key: myKey,
     field: 'title',
     offset: 0,
-    limit: 40,
+    limit: 5,
     // type: 'books',
     order: 'relevance',
     download: 'epub',

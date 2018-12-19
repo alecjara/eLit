@@ -38,7 +38,7 @@ export default class Search extends React.Component {
     render() {
 
         return (
-            <div >
+            <div id="bookscontainer">
                 {this.state.error && <div>Error, please try again!!</div>}
                 <form onSubmit={this.handleSubmit}>
                     <input onChange= {this.handleChange} name="search" type="text" placeholder="search" />
@@ -65,6 +65,3 @@ export default class Search extends React.Component {
         );
     }
 }
-
-//div position absolute inside the tablet
-//overflow-x: scroll
