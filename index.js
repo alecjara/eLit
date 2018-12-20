@@ -125,7 +125,7 @@ let options = {
     key: myKey,
     field: 'title',
     offset: 0,
-    limit: 10,
+    limit: 40,
     // type: 'books',
     order: 'relevance',
     download: 'epub',
@@ -167,72 +167,3 @@ app.get('*', function(req, res) {
 app.listen(8080, function() {
     console.log("I'm listening.");
 });
-
-
-// app.get(`https://www.googleapis.com/books/v1/volumes?q=params&download=epub&key=` + myKey).then(data => {
-//     //console.log("data in axios get:", data);
-//     this.setState(data);
-//     //redirects user to / route: use this if user writes nonsense in url
-// }).catch(error => {
-//     console.log("error in axios get:", error);
-// });
-
-
-//const https = require('https');
-//const convert = require('xml-js');
-
-
-//const request = require('request');
-//const url = 'https://openlibrary.org/search/authors?q=${author}';
-
-//app.get("search/:isbn", )
-//${isbn}
-//9780980200447
-// request('https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&format=json', (err, res, body) => {
-//     if ( ! err ) {
-//         console.log("body in request:", body);
-//         console.log("res in request:", res);
-//         // res.json(res);
-//     } else {
-//         console.log(err);
-//     }
-
-//var rp = require('request-promise');
-//
-// app.get("/search", (req, res) => {
-//     console.log("Res", res);
-//     rp('https://openlibrary.org/api/books?bibkeys=ISBN:{isbn}&format=json').then(function(res) {
-//         console.log("res on openlibrary api", res);
-//         res.json(res);
-//     }).catch(err => {
-//         console.log("error in openlibrary api:", err);
-//     });
-// });
-
-
-//let parsedResults = JSON.parse(res.body);
-//console.log("parsedResults:", parsedResults);
-//res.json(parsedResults);
-// });
-
-// https.get('https://openlibrary.org/api/books?bibkeys=ISBN:${}&format=json', (resp) => {
-//     let data = '';
-//
-//     // A chunk of data has been recieved.
-//     resp.on('data', (chunk) => {
-//         data += chunk;
-//         console.log("data", data);
-//     });
-//
-//     //The whole response has been received. Print out the result.
-//     resp.on('end', () => {
-//         console.log("data in get api", data);
-//         // let results2 = convert.xml2json(data, {compact: true, spaces: 4});
-//         // console.log("results2", results2);
-//         // //let finalresults = JSON.parse(results2);
-//         // console.log("finalresults", finalresults);
-//     });
-//
-// }).on("error", (err) => {
-//     console.log("Error: " + err.message);
-// });

@@ -36,8 +36,10 @@ export default class App extends React.Component {
                             <br />
                             <br />
                             <img className="kindle" src="/kindle.png"  alt="kindle" /> <a target="__blank" href="https://www.amazon.com/Best-Sellers-Kindle-Store-eBooks/zgbs/digital-text/154606011/ref=zg_bs?_encoding=UTF8&tf=1">Top 100 Kindle</a>
+                            <br />
+                            <br />
+                            <a href="/logout">LOGOUT</a>
                         </div>
-                        <div id="logout"><a href="/logout">LOGOUT</a></div>
                         <div id="personal">
                             <a href="https://openlibrary.org/" target="__blank"><img className="olimg" src="/oplib.jpg"  alt="openlibrary"/></a>
                             <br />

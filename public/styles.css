@@ -78,13 +78,12 @@ input {
 #booksresults {
     position: absolute;
     width: 600px;
+    /* height: 550px; */
+    top: 360px;
+    /* left: 35%; */
     height: 450px;
-    margin-left: 530px;
-    margin-top: 190px;
-    /* margin-left: 29%;
-    margin-right: 30%;
-    margin-top: 10%; */
-    /* display: flex; */
+    left: 32%;
+
     overflow-x: scroll;
 
 }
@@ -113,8 +112,8 @@ input {
 
 #logout {
     position: absolute;
-    bottom: 150px;
-    margin-left: 30px;
+    bottom: 470px;
+    right: 90px;
     font-size: 25px;
     font-weight: bold;
 
@@ -122,13 +121,14 @@ input {
 
 #bookscontainer {
     margin-top: 30px;
+    margin-left: 38%;
 }
 
 #otherlinks {
     /* float: right;
     display: inline-block; */
     position:absolute;
-    top: 350px;
+    top: 440px;
     right: 40px;
     font-size: 25px;
     font-weight: bold;
@@ -158,20 +158,30 @@ input {
     font-size: 20px;
 }
 
-#personal {
-    position: absolute;
+/* #personal {
+    position: absolute; */
     /* to connect to hdmi: */
     /* margin-left: 550px;
     top: 370px; */
     /* on my screen: */
-    margin-left: 490px;
+    /* margin-left: 490px;
     top: 370px;
 
+} */
+
+/* on the left side: */
+#personal {
+    position: absolute;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    margin-left: 30px;
+    top: 260px;
 }
 
 .olimg {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     border: 1px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
