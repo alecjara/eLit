@@ -28,7 +28,6 @@ export default class App extends React.Component {
                     <div>
                         <Logo />
                         <br />
-                        <a href="/logout" id="logout">LOGOUT</a>
                         <br />
                         <br />
                         <Search />
@@ -38,8 +37,19 @@ export default class App extends React.Component {
                             <br />
                             <img className="kindle" src="/kindle.png"  alt="kindle" /> <a target="__blank" href="https://www.amazon.com/Best-Sellers-Kindle-Store-eBooks/zgbs/digital-text/154606011/ref=zg_bs?_encoding=UTF8&tf=1">Top 100 Kindle</a>
                         </div>
+                        <div id="logout"><a href="/logout">LOGOUT</a></div>
                         <div id="personal">
-                        
+                            <a href="https://openlibrary.org/" target="__blank"><img className="olimg" src="/oplib.jpg"  alt="openlibrary"/></a>
+                            <br />
+                            <a href="https://archive.org/details/inlibrary?sort=-publicdate" target="__blank"><img className="olimg" src="/archive.png"  alt="archive"/></a>
+                            <br />
+                            <a href="https://www.smashwords.com/shelves/category/1/free/any" target="__blank"><img className="olimg" src="/sw.jpeg" alt="smashwords"/></a>
+                            <br />
+                            <a href="http://libgen.io/foreignfiction/" target="__blank"><img className="olimg" src="/lg.ico" alt="lgbooks"/></a>
+                            <br />
+                            <a href="https://www.amazon.com/kindle-dbs/fd/kcp" target="__blank"><img className="olimg" src="/kindle.png" alt="kindle"/></a>
+                            <br />
+                            <a href="http://www.bluefirereader.com/bluefire-reader.html" target="__blank"><img className="olimg" src="/bf.jpeg" alt="bluefire"/></a>
                         </div>
                     </div>
                 </BrowserRouter>

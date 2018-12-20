@@ -33,14 +33,14 @@ body {
 .registration-container {
     display: block;
     margin-left: 35%;
-    margin-top: 10%;
+    margin-top: 13%;
 
 }
 
 .logincont {
     display: block;
     margin-left: 30%;
-    margin-top: 15%;
+    margin-top: 18%;
 
 
 }
@@ -96,7 +96,6 @@ input {
 
 
 
-
 }
 
 .searchbutton {
@@ -113,7 +112,12 @@ input {
 }
 
 #logout {
-    margin-top: 15px;
+    position: absolute;
+    bottom: 150px;
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+
 }
 
 #bookscontainer {
@@ -131,8 +135,8 @@ input {
 }
 
 .kindle {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
 }
 
 #bookimg {
@@ -152,4 +156,22 @@ input {
 
 .bookinfo {
     font-size: 20px;
+}
+
+#personal {
+    position: absolute;
+    /* to connect to hdmi: */
+    /* margin-left: 550px;
+    top: 370px; */
+    /* on my screen: */
+    margin-left: 490px;
+    top: 370px;
+
+}
+
+.olimg {
+    width: 45px;
+    height: 45px;
+    border: 1px solid black;
+    margin-bottom: 20px;
 }
