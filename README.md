@@ -25,3 +25,6 @@ expensive hobby so instead of buying new books all the time I created a program 
 
 ![eLit1](/eLit1.png)
 
+![eLit2](/eLit2.png)
+
+![eLit3](/eLit3.png)
