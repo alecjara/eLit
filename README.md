@@ -1,7 +1,6 @@
 # eLit
 React, API
 
-"eLit"
 
 ## Summary
 
