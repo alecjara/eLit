@@ -3,7 +3,7 @@ import React from 'react';
 export default function Logo() {
     return (
         <div>
-            <img className="logo" src="/eLit1.png"  alt="ebooks" />
+            <img className="logo" src="/eLitb.png"  alt="ebooks" />
         </div>
     );
 }

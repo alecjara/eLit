@@ -8,6 +8,7 @@ const { hash, compare } = require("./bcrypt");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
 
+
 app.disable("x-powered-by");
 
 app.use(bodyparser.urlencoded({extended: false}));
@@ -45,8 +46,18 @@ if (process.env.NODE_ENV != 'production') {
     app.use('/bundle.js', (req, res) => res.sendFile(`${__dirname}/bundle.js`));
 }
 
+let secrets;
+
+if (process.env.NODE_ENV == 'production') {
+    secrets = process.env;
+} else {
+    secrets = require('./secrets');
+    //console.log("secrets:", secrets);
+}
+const myKey = secrets.API_KEY;
+
 app.post("/registration", (req, res) => {
-    console.log("req.body in /registration:", req.body);
+    //console.log("req.body in /registration:", req.body);
     if (req.body.password != "") {
         hash(req.body.password).then(hash => {
             console.log("hashedpassword in post /registration:", hash);
@@ -108,9 +119,36 @@ app.get("/user", (req, res) => {
     });
 });
 
+let books = require('google-books-search');
+
+let options = {
+    key: myKey,
+    field: 'title',
+    offset: 0,
+    limit: 40,
+    // type: 'books',
+    order: 'relevance',
+    download: 'epub',
+    printType: 'ebook',
+    lang: 'en'
+};
+
+app.get("/search/:name", (req, res) => {
+    books.search(req.params.name, options, function(error, results, apiResponse) {
+        if ( ! error ) {
+            console.log("results in search index.js:", results);
+            console.log("apiResponse:", apiResponse);
+            res.json(results);
+        } else {
+            console.log(error);
+        }
+
+    });
+});
+
 app.get("/logout", (req, res) => {
     req.session = null;
-    res.redirect("/");
+    res.redirect("/welcome");
 });
 
 app.get('/welcome', function(req, res) {
