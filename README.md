@@ -4,8 +4,7 @@ React, API
 
 ## Summary
 
-eLit stands for Electronic Literature, I am a passionate reader and when you read about 15 books a month it becomes a very 
-expensive hobby so instead of buying new books all the time I created a program to find my next ebook to read free of charge.
+eLit stands for Electronic Literature, I am a passionate reader and read about 15 books a month, since it is a very expensive hobby I decided to create a program to find my next ebook for free.
 
 ## Tech used:
 - React.js 
