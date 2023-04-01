@@ -29,7 +29,7 @@
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-alpha.2",
     "csurf": "^1.9.0",
-    "express": "^4.14.0",
+    "express": "^4.17.3",
     "google-books-search": "^0.3.1",
     "googlebooksapi": "0.0.1",
     "http-proxy-middleware": "^0.19.1",
