@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "archive.org": "0.0.7",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
