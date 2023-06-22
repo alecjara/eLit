@@ -48,7 +48,7 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "socket.io": "^2.5.0",
-    "spiced-pg": "^1.0.0",
+    "spiced-pg": "^1.0.4",
     "uid-safe": "^2.1.4",
     "webpack": "^1.15.0",
     "webpack-dev-middleware": "^1.8.4",
